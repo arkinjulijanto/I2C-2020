@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang = 'id'>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>FINALIS I2C 2020</title>
+        <link rel="icon" href="image/I2C.png">
+
+        <meta name="description" content="Pengumuman finalis I2C (Innovative Informatics Contest) 2020 sudah dirilis.">
+        <meta name="image" content="https://ifest-uajy.com/assets/i2c/og_pengumuman.png">
+
+        <!-- Schema.org for Google -->
+        <meta itemprop="name" content="PENGUMUMAN I2C 2020">
+        <meta itemprop="description" content="Pengumuman finalis I2C (Innovative Informatics Contest) 2020 sudah dirilis.">
+        <meta itemprop="image" content="https://ifest-uajy.com/assets/i2c/og_pengumuman.png">
+        <!-- Open Graph general (Facebook, Pinterest & Google+) -->
+        <meta name="og:title" content="PENGUMUMAN I2C 2020">
+        <meta name="og:description" content="Pengumuman finalis I2C (Innovative Informatics Contest) 2020 sudah dirilis.">
+        <meta name="og:image" content="https://ifest-uajy.com/assets/i2c/og_pengumuman.png">
+        <meta name="og:url" content="https://i2c.ifest-uajy.com/pengumuman.html">
+        <meta name="og:site_name" content="PENGUMUMAN I2C 2020">
+        <meta name="og:locale" content="id_ID">
+        <meta name="og:type" content="website">
+    
+        <!-- CSS Framework -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="css/pengumuan.css">
+
+        <script>
+            $(document).ready(function() {
+            // Check for click events on the navbar burger icon
+            $(".navbar-burger").click(function() {
+                // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                $(".navbar-burger").toggleClass("is-active");
+                $(".navbar-menu").toggleClass("is-active");
+            });
+            
+            $(".navbar-item").click(function() {
+                // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                $(".navbar-burger").removeClass("is-active");
+                $(".navbar-menu").removeClass("is-active");
+            });
+            });
+        </script>
+        <script>
+            $(document).ready(function() {
+                    // Select all links with hashes
+                $('a[href*="#"]')
+                  // Remove links that don't actually link to anything
+                  .not('[href="#"]')
+                  .not('[href="#0"]')
+                  .click(function(event) {
+                    // On-page links
+                    if (
+                      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+                      && 
+                      location.hostname == this.hostname
+                    ) {
+                      // Figure out element to scroll to
+                      var target = $(this.hash);
+                      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                      // Does a scroll target exist?
+                      if (target.length) {
+                        // Only prevent default if animation is actually gonna happen
+                        event.preventDefault();
+                        $('html, body').animate({
+                          scrollTop: target.offset().top
+                        }, 1000, function() {
+                          // Callback after animation
+                          // Must change focus!
+                          var $target = $(target);
+                          $target.focus();
+                          if ($target.is(":focus")) { // Checking if the target was focused
+                            return false;
+                          } else {
+                            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+                            $target.focus(); // Set focus again
+                          };
+                        });
+                      }
+                    }
+                  });
+                });
+
+                
+        </script>
+        
+        <!-- JQuery -->
+        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+        <script type="text/javascript">
+            $(window).on('scroll',function(){
+                if ($(window).scrollTop()){
+                    $(navbar).addClass('new');
+                }else 
+                {
+                    $(navbar).removeClass('new');
+                } 
+            });
+            $(document).ready(function(){
+                $('a[href^="#"]').on('click', function(event) {
+                    event.preventDefault();
+
+                    var target = this.hash;
+                    var result = $(target);
+
+                    $('html, body').stop().animate({
+                        scrollTop : result.offset().top
+                    }, 1000, 'swing', function() {
+                        window.location.hash = target;
+                    });
+                });
+            });
+            
+        </script>
+        <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/brands.css" integrity="sha384-BCEeiNUiLzxxoeYaIu7jJqq0aVVz2O2Ig4WbWEmRQ2Dx/AAxNV1wMDBXyyrxw1Zd" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/fontawesome.css" integrity="sha384-HU5rcgG/yUrsDGWsVACclYdzdCcn5yU8V/3V84zSrPDHwZEdjykadlgI6RHrxGrJ" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Black+Ops+One&display=swap" rel="stylesheet">
+        <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+
+        <!-- AOS -->
+        <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet">
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    </head>
+    <body>
+        <header class="nav-down">
+            <nav class="navbar" aria-label="main navigation">
+                <div class="navbar-brand">
+                    <div class="sflex">
+                        <div class="ov"><img src="image/atma-01.png"></div>
+                        <div class="ov"><img src="image/himaforka.png"></div>
+                        <div class="ov"><img src="image/ifest.png"></div>
+                        <div class="ov">
+                            <a href="#awal">
+                                <img src="image/I2C.png" style="width: auto !important; max-width: auto !important;">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="navbar-item" style="padding-left:0;">
+                        <h3 class="title 3"></h3>
+                    </div>
+    
+                    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                        <span aria-hidden="false"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                    </a>
+                </div>
+    
+                <div id="navbarBasicExample" class="navbar-menu">
+                    <div class="navbar-start">
+                    </div>
+    
+                    <div class="navbar-end">
+                        <div class="navbar-item">
+                            <a class="navbar-item button-link" href="index.html#about" class="navbar__item">
+                                Tentang I2C
+                            </a>
+                            <a class="navbar-item button-link" href="index.html#ketentuan" class="navbar__item">
+                                Ketentuan
+                            </a>
+                            <a class="navbar-item button-link" href="index.html#hadiah" class="navbar__item">
+                                Hadiah
+                            </a>
+                            <a class="navbar-item button-link" href="index.html#timeline" class="navbar__item">
+                                Timeline
+                            </a>
+                            <a class="navbar-item button-link" href="https://dashboard.ifest-uajy.com/contact" class="navbar__item">
+                                Hubungi Kami
+                            </a>
+                            <a class="navbar-item button-link button-bordered" href="pengumuman.html" class="navbar__item">
+                                Pengumuman
+                            </a>
+                            <a class="navbar-item button-link button-bordered" href="https://ifest-uajy.com" class="navbar__item">
+                                IFEST#8
+                            </a>
+                        </div>
+                    </div>
+                </div>
+        </nav>   
+        </header>
+        <script>
+            var didScroll;
+            var lastScrollTop = 0;
+            var delta = 5;
+            var navbarHeight = $('header').outerHeight();
+
+            $(window).scroll(function(event){
+                didScroll = true;
+            });
+
+            setInterval(function() {
+                if (didScroll) {
+                    hasScrolled();
+                    didScroll = false;
+                }
+            }, 250);
+
+            function hasScrolled() {
+                var st = $(this).scrollTop();
+                
+                if(Math.abs(lastScrollTop - st) <= delta)
+                    return;
+                
+                if (st > lastScrollTop && st > navbarHeight){
+                    $('header').removeClass('nav-down').addClass('nav-up');
+                } else {
+                    if(st + $(window).height() < $(document).height()) {
+                        $('header').removeClass('nav-up').addClass('nav-down');
+                    }
+                }
+                
+                lastScrollTop = st;
+            }
+        </script>
+        <section class="section" id="awal">
+            <div class="items">
+                <div class="container">
+                    <h1 class="judul" data-aos="zoom-in" data-aos-delay="200">FINALIS I2C 2020</h1>
+                    <p style="text-align: center;">Bagi para finalis bisa mengupload poster dan abstrak ide di : <br><a href="https://dashboard.ifest-uajy.com/">https://dashboard.ifest-uajy.com</a>.</p><br>
+                    <div class="columns">
+                        <article class="column house is--first" onclick="">
+                            <h2 class="house__name" >
+                                <i class="far fa-question-circle icon-4x"></i>
+                            </h2>
+                            <p class="house__motto"><span>Essun<br>Tech</span> <span class="line">SMAN 1 Gresik</span> <span class="line"></span></p>
+                        </article>
+                        
+                        <article class="column house is--second" onclick="">
+                            <h2 class="house__name" >
+                                <i class="far fa-question-circle icon-4x"></i>
+                            </h2>
+                            <p class="house__motto"><span class="line"><span>AWAKE IT</span> <br><span> </span><span></span> <span>SMKN 2 Magelang</span></p>
+                        </article>
+                        
+                        <article class="column house is--third" onclick="">
+                            <h2 class="house__name">
+                                <i class="far fa-question-circle icon-4x"></i>
+                            </h2>
+                            <p class="house__motto"><span class="line">Fixers IT</span> <span class="line"></span> <span>SMKN 2 Magelang</span></p>
+                        </article>
+                        
+                        <article class="column house is--second" onclick="">
+                            <h2 class="house__name">
+                                <i class="far fa-question-circle icon-4x"></i>
+                            </h2>
+                            <p class="house__motto"><span class="line"><span>TIMBO</span> <br><span> </span><span></span> <span>SDH Makassar</span></p>
+                        </article>
+                    </div>
+                    <br>
+                    <div class="columns">
+                        <article class="column house is--fifth" onclick="">
+                            <h2 class="house__name">
+                                <i class="far fa-question-circle icon-4x"></i>
+                            </h2>
+                            <p class="house__motto"><span class="line">SMK Darussa'adah</span> <span>Sentul<br>Empire</span></p>
+                        </article>
+                        
+                        <article class="column house is--sixth" onclick="">
+                            <h2 class="house__name">
+                                <i class="far fa-question-circle icon-4x"></i>
+                            </h2>
+                            <p class="house__motto"><span class="line">Booyah<br>Team</span> <span>SMK Telkom Malang</span> <span></span></p>
+                        </article>
+                        
+                        <article class="column house is--seventh" onclick="">
+                            <h2 class="house__name">
+                                <i class="far fa-question-circle icon-4x"></i>
+                            </h2>
+                            <p class="house__motto"><span class="line">SMK Darussa'adah</span> <span class="line">Plat F</span> <span class="line"></span> <span class="line"></span></p>
+                        </article>
+                        
+                        <article class="column house is--second" onclick="">
+                            <h2 class="house__name">
+                                <i class="far fa-question-circle icon-4x"></i>
+                            </h2>
+                            <p class="house__motto"><span class="line"><span>AUCO</span> <br><span> </span><span></span> <span>SMA BUDI UTAMA</span></p>
+                        </article>
+                    </div>
+                    <br>
+                    <div class="columns">
+                        <article class="column house is--first" onclick="">
+                            <h2 class="house__name">
+                                <i class="far fa-question-circle icon-4x"></i>
+                            </h2>
+                            <p class="house__motto"><span>Hocus<br>Focus</span> <span class="line">SMA Budi Utama</span> <span class="line"></span></p>
+                        </article>
+                        
+                        <article class="column house is--second" onclick="">
+                            <h2 class="house__name">
+                                <i class="far fa-question-circle icon-4x"></i>
+                            </h2>
+                            <p class="house__motto"><span class="line"><span>Bar Square</span> <span></span></span> <span>MBI Amanatul Ummah</span> <span></span></p>
+                        </article>
+                        
+                        <article class="column house is--third" onclick="">
+                            <h2 class="house__name">
+                                <i class="far fa-question-circle icon-4x"></i>
+                            </h2>
+                            <p class="house__motto"><span class="line">X MIPA BOYS</span> <span class="line"></span> <span>SMA Budi Utama</span></p>
+                        </article>
+                        
+                        <article class="column house is--second" onclick="">
+                            <h2 class="house__name">
+                                <i class="far fa-question-circle icon-4x"></i>
+                            </h2>
+                            <p class="house__motto"><span class="line"><span>ZEUS<br>LANANG</span> <br><span> </span><span></span> <span>VHS BUDI MULIA DUA</span></p>
+                        </article>
+                    </div>
+                    <br>
+                    <div class="columns">
+                        <article class="column house is--fifth" onclick="">
+                            <h2 class="house__name">
+                                <i class="far fa-question-circle icon-4x"></i>
+                            </h2>
+                            <p class="house__motto"><span class="line">SMA IT Nur Hidayah</span> <span>Jilly</span></p>
+                        </article>
+                        
+                        <article class="column house is--sixth" onclick="">
+                            <h2 class="house__name">
+                                <i class="far fa-question-circle icon-4x"></i>
+                            </h2>
+                            <p class="house__motto"><span class="line">Day</span> <span>SMA Tumbuh</span> <span></span></p>
+                        </article>
+                        
+                        <article class="column house is--seventh" onclick="">
+                            <h2 class="house__name">
+                                <i class="far fa-question-circle icon-4x"></i>
+                            </h2>
+                            <p class="house__motto"><span class="line">SMA Tumbuh</span> <span class="line">Absolute</span> <span class="line"></span> <span class="line">Team</span></p>
+                        </article>
+                        
+                        <article class="column house is--second" onclick="">
+                            <h2 class="house__name">
+                                <i class="far fa-question-circle icon-4x"></i>
+                            </h2>
+                            <p class="house__motto"><span class="line"><span>MAWAR<br>BERDURI</span> <br><span> </span><span></span> <span>SMAN 2 BALIGE</span></p>
+                        </article>
+                    </div>
+                    <br>
+                    <div class="columns">
+                        <article class="column house is--first" onclick="">
+                            <h2 class="house__name">
+                                <i class="far fa-question-circle icon-4x"></i>
+                            </h2>
+                            <p class="house__motto"><span>AuSome<br>Team</span> <span class="line">SMA Kolose Loyola<br>Semarang</span> <span class="line"></span></p>
+                        </article>
+                        
+                        <article class="column house is--second" onclick="">
+                            <h2 class="house__name">
+                                <i class="far fa-question-circle icon-4x"></i>
+                            </h2>
+                            <p class="house__motto"><span class="line"><span>GUDDEY<br>KULIN 1</span> <br><span> </span><span></span> <span>MAN 1 Yogyakarta</span></p>
+                        </article>
+                        
+                        <article class="column house is--third" onclick="">
+                            <h2 class="house__name">
+                                <i class="far fa-question-circle icon-4x"></i>
+                            </h2>
+                            <p class="house__motto"><span class="line"></span> <span class="line">WIU TEAM</span> <span>SMAN Siwalima<br>Ambon</span></p>
+                        </article>
+                        
+                        <article class="column house is--second" onclick="">
+                            <h2 class="house__name">
+                                <i class="far fa-question-circle icon-4x"></i>
+                            </h2>
+                            <p class="house__motto"><span class="line"><span>HALOO</span> <br><span> </span><span></span> <span>SMAN 1 BADEGAN</span></p>
+                        </article>
+                    </div>
+                </div>
+            </div>   
+        </section>    
+    </body>
+
+    <footer class="footer" id="hubungikami" style="background-color: #000;">
+        <div style="width: 100px; height: 84px; border: 0px;"></div>
+    <div class="content has-text-centered" data-aos="zoom-in" >
+        <div class="columns">
+            <div class="column" data-aos="zoom-in" data-aos-delay="200">
+                <h1 class="footer-text">Hubungi Kami</h1>
+            <div class="phone__box__content">
+                <p class="phone__box">
+                    <i class="fas fa-phone"></i> &nbsp; +62 877 7371 8611  (Novita)
+                </p>
+                <p class="phone__box">
+                        <i class="fab fa-line brands"></i> &nbsp; nov.novitad
+                </p>
+                <p class="phone__box">
+                    <i class="fas fa-phone"></i> &nbsp; +62 895 3761 23658 (Hizkia)
+                </p>
+                <p class="phone__box">
+                        <i class="fab fa-line brands"></i> &nbsp; inihizkia
+                </p>
+            </div>
+            </div>
+            <div class="column" data-aos="zoom-in" data-aos-delay="200">
+                <h1 class="footer-text">Scan Us on LINE!</h1>
+                <img class="footer-image" src="image/line_qrcode.png">
+            </div>
+            <div class="column" data-aos="zoom-in" data-aos-delay="200">
+                <h1 class="footer-text">Ikuti Kami</h1>
+                <div class="phone__box__content">
+                    <p class="phone__box">
+                        <i class="fab fa-line brands"></i> &nbsp; <a href="http://line.me/ti/p/~@ykb1847q">@ykb1847q</a>
+                    </p>
+                    <p class="phone__box">
+                        <i class="fab fa-instagram brands"></i> &nbsp; <a href="https://www.instagram.com/ifest_uajy/">@ifest_uajy</a>
+                    </p>
+                    <p class="phone__box">
+                        <i class="fab fa-youtube brands"></i> &nbsp; <a href="https://www.youtube.com/channel/UCuZZWzBCbOhaA76oqye3z2A">IFEST YouTube Channel</a>
+                    </p>
+                    <p class="phone__box">
+                        <i class="fab fa-facebook brands"></i> &nbsp; <a href="https://www.facebook.com/Ifest-7-188102558810238/">IFEST Facebook Page</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="footer__title">
+            <strong style="color:cornflowerblue"></strong>
+
+        </div>
+        <p class="text-center ma-0 footer-font">
+            Made with
+            <span style="color: #ff4757; font-size: 1.5em; vertical-align:middle;"><img style="height:1em; margin:auto;" 
+            src="data:image/svg+xml;base64,
+            PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy
+            8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9
+            IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgNDkyLjcxOSA0OTIuNzE5IiBzdHlsZT0iZW5hYm
+            xlLWJhY2tncm91bmQ6bmV3IDAgMCA0OTIuNzE5IDQ5Mi43MTk7IiB4bWw6c3BhY2U9InByZXNl
+            cnZlIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgY2xhc3M9IiI+PGc+PGc+Cgk8ZyBpZD0iSW
+            NvbnNfMThfIj4KCQk8cGF0aCBkPSJNNDkyLjcxOSwxNjYuMDA4YzAtNzMuNDg2LTU5LjU3My0x
+            MzMuMDU2LTEzMy4wNTktMTMzLjA1NmMtNDcuOTg1LDAtODkuODkxLDI1LjQ4NC0xMTMuMzAyLD
+            YzLjU2OSAgICBjLTIzLjQwOC0zOC4wODUtNjUuMzMyLTYzLjU2OS0xMTMuMzE2LTYzLjU2OUM1
+            OS41NTYsMzIuOTUyLDAsOTIuNTIyLDAsMTY2LjAwOGMwLDQwLjAwOSwxNy43MjksNzUuODAzLD
+            Q1LjY3MSwxMDAuMTc4ICAgIGwxODguNTQ1LDE4OC41NTNjMy4yMiwzLjIyLDcuNTg3LDUuMDI5
+            LDEyLjE0Miw1LjAyOWM0LjU1NSwwLDguOTIyLTEuODA5LDEyLjE0Mi01LjAyOWwxODguNTQ1LT
+            E4OC41NTMgICAgQzQ3NC45ODgsMjQxLjgxMSw0OTIuNzE5LDIwNi4wMTcsNDkyLjcxOSwxNjYu
+            MDA4eiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgY2xhc3M9ImFjdGl2ZS1wYXRoIiBzdHlsZT0
+            iZmlsbDojRkY0NzU3IiBkYXRhLW9sZF9jb2xvcj0iIzAwMDAwMCI+PC9wYXRoPgoJPC9nPgo8L2c+PC9nPiA8L3N2Zz4=" /></span>
+            by
+            <strong style="color : #fff;">SI IFest</strong>
+            |&nbsp;Hak Cipta © 2020
+            <a  
+              href="https://ifest-uajy.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="LinkToHome"
+            >
+              <span class="footer-text">Informatics Festival (IFest) #8</span>
+            </a>
+          </p>
+        <!-- <div class="footer__text">
+            <p class="login--ptext">&copy; 2019 - <a class="foot-link" href="https://ifest-uajy.com">IFEST#8</a> Sie. Sistem Informasi</p>
+        </div> -->
+    </div>
+</footer>
+<script>
+    AOS.init();
+//Mobile
+$('.navbar-burger').on('click', function(){
+    $('.navbar-menu').toggleClass('action');
+});
+</script>
+</html>

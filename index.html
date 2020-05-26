@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="id">
+
+    <head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        
+        <meta name="viewport" content="width=device-width">
+    
+       <!-- COMMON TAGS -->
+
+<title>I2C 2020</title>
+<!-- Search Engine -->
+<meta name="description" content="I2C (Innovative Informatics Contest) 2020 adalah sebuah lomba dimana siswa/i SMA/SMK yang tergabung dalam satu tim akan berlomba untuk merancang berbagai ide inovatif aplikasi dalam aplikasi mobile. ">
+<meta name="image" content="https://ifest-uajy.com/assets/i2c/og_image.png">
+<!-- Schema.org for Google -->
+<meta itemprop="name" content="I2C 2020">
+<meta itemprop="description" content="I2C (Innovative Informatics Contest) 2020 adalah sebuah lomba dimana siswa/i SMA/SMK yang tergabung dalam satu tim akan berlomba untuk merancang berbagai ide inovatif aplikasi dalam aplikasi mobile. ">
+<meta itemprop="image" content="https://ifest-uajy.com/assets/i2c/og_image.png">
+<!-- Open Graph general (Facebook, Pinterest & Google+) -->
+<meta name="og:title" content="I2C 2020">
+<meta name="og:description" content="I2C (Innovative Informatics Contest) 2020 adalah sebuah lomba dimana siswa/i SMA/SMK yang tergabung dalam satu tim akan berlomba untuk merancang berbagai ide inovatif aplikasi dalam aplikasi mobile. ">
+<meta name="og:image" content="https://ifest-uajy.com/assets/i2c/og_image.png">
+<meta name="og:url" content="https://i2c.ifest-uajy.com/">
+<meta name="og:site_name" content="I2C 2020">
+<meta name="og:locale" content="id_ID">
+<meta name="og:type" content="website">
+
+        <link rel="icon" href="image/I2C.png">
+    
+        <!-- CSS Framework -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/css/bulma-carousel.min.css">
+    
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/slider-def.css">
+    
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/brands.css" integrity="sha384-BCEeiNUiLzxxoeYaIu7jJqq0aVVz2O2Ig4WbWEmRQ2Dx/AAxNV1wMDBXyyrxw1Zd" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/fontawesome.css" integrity="sha384-HU5rcgG/yUrsDGWsVACclYdzdCcn5yU8V/3V84zSrPDHwZEdjykadlgI6RHrxGrJ" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Black+Ops+One&display=swap" rel="stylesheet">
+        <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+
+        <!-- AOS -->
+        <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet">
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+        <script>
+            $(document).ready(function() {
+            // Check for click events on the navbar burger icon
+            $(".navbar-burger").click(function() {
+                // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                $(".navbar-burger").toggleClass("is-active");
+                $(".navbar-menu").toggleClass("is-active");
+            });
+            
+            $(".navbar-item").click(function() {
+                // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                $(".navbar-burger").removeClass("is-active");
+                $(".navbar-menu").removeClass("is-active");
+            });
+            });
+        </script>
+        <script>
+            $(document).ready(function() {
+                    // Select all links with hashes
+                $('a[href*="#"]')
+                  // Remove links that don't actually link to anything
+                  .not('[href="#"]')
+                  .not('[href="#0"]')
+                  .click(function(event) {
+                    // On-page links
+                    if (
+                      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+                      && 
+                      location.hostname == this.hostname
+                    ) {
+                      // Figure out element to scroll to
+                      var target = $(this.hash);
+                      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                      // Does a scroll target exist?
+                      if (target.length) {
+                        // Only prevent default if animation is actually gonna happen
+                        event.preventDefault();
+                        $('html, body').animate({
+                          scrollTop: target.offset().top
+                        }, 1000, function() {
+                          // Callback after animation
+                          // Must change focus!
+                          var $target = $(target);
+                          $target.focus();
+                          if ($target.is(":focus")) { // Checking if the target was focused
+                            return false;
+                          } else {
+                            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+                            $target.focus(); // Set focus again
+                          };
+                        });
+                      }
+                    }
+                  });
+                });
+
+                
+        </script>
+        
+        <!-- JQuery -->
+        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+        <script type="text/javascript">
+            $(window).on('scroll',function(){
+                if ($(window).scrollTop()){
+                    $(navbar).addClass('new');
+                }else 
+                {
+                    $(navbar).removeClass('new');
+                } 
+            });
+            $(document).ready(function(){
+                $('a[href^="#"]').on('click', function(event) {
+                    event.preventDefault();
+
+                    var target = this.hash;
+                    var result = $(target);
+
+                    $('html, body').stop().animate({
+                        scrollTop : result.offset().top
+                    }, 1000, 'swing', function() {
+                        window.location.hash = target;
+                    });
+                });
+            });
+            
+        </script>
+        <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-154113787-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-154113787-2');
+</script>
+
+    </head>
+
+    <body>
+            <header class="nav-down">
+                <nav class="navbar" aria-label="main navigation">
+                    <div class="navbar-brand">
+                        <div class="sflex">
+                            <div class="ov"><img src="image/atma-01.png"></div>
+                            <div class="ov"><img src="image/himaforka.png"></div>
+                            <div class="ov"><img src="image/ifest.png"></div>
+                            <div class="ov">
+                                <a href="#awal">
+                                    <img src="image/I2C.png" style="width: auto !important; max-width: auto !important;">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="navbar-item" style="padding-left:0;">
+                            <h3 class="title 3"></h3>
+                        </div>
+        
+                        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                            <span aria-hidden="false"></span>
+                            <span aria-hidden="true"></span>
+                            <span aria-hidden="true"></span>
+                        </a>
+                    </div>
+        
+                    <div id="navbarBasicExample" class="navbar-menu">
+                        <div class="navbar-start">
+                        </div>
+        
+                        <div class="navbar-end">
+                            <div class="navbar-item">
+                                <a class="navbar-item button-link" href="#about" class="navbar__item">
+                                    Tentang I2C
+                                </a>
+                                <a class="navbar-item button-link" href="#ketentuan" class="navbar__item">
+                                    Ketentuan
+                                </a>
+                                <a class="navbar-item button-link" href="#hadiah" class="navbar__item">
+                                    Hadiah
+                                </a>
+                                <a class="navbar-item button-link" href="#timeline" class="navbar__item">
+                                    Timeline
+                                </a>
+                                <a class="navbar-item button-link" href="https://dashboard.ifest-uajy.com/contact" class="navbar__item">
+                                    Hubungi Kami
+                                </a>
+                                <a class="navbar-item button-link button-bordered" href="pengumuman.html" class="navbar__item">
+                                    Pengumuman
+                                </a>
+                                <a class="navbar-item button-link button-bordered" href="https://ifest-uajy.com" class="navbar__item">
+                                    IFEST#8
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+            </nav>   
+            </header>
+            <script>
+                var didScroll;
+                var lastScrollTop = 0;
+                var delta = 5;
+                var navbarHeight = $('header').outerHeight();
+
+                $(window).scroll(function(event){
+                    didScroll = true;
+                });
+
+                setInterval(function() {
+                    if (didScroll) {
+                        hasScrolled();
+                        didScroll = false;
+                    }
+                }, 250);
+
+                function hasScrolled() {
+                    var st = $(this).scrollTop();
+                    
+                    if(Math.abs(lastScrollTop - st) <= delta)
+                        return;
+                    
+                    if (st > lastScrollTop && st > navbarHeight){
+                        $('header').removeClass('nav-down').addClass('nav-up');
+                    } else {
+                        if(st + $(window).height() < $(document).height()) {
+                            $('header').removeClass('nav-up').addClass('nav-down');
+                        }
+                    }
+                    
+                    lastScrollTop = st;
+                }
+            </script>
+        <section class="section" id="awal" style="position: relative;">
+            <div style="width: 100px; height: 84px; border: 0px;"></div>
+                <div class="container has-text-centered" style=" position : absolute; left: 0; right: 0; margin: auto">
+                    <div class="awal-logo" data-aos="zoom-in" data-aos-delay="100">
+                        <div style="background-color: #fff; border-radius: 100%; width: 100px; height: 100px; padding: 12px ; left: 0; right: 0; margin: auto; box-shadow: 0px 0px 50px 1px rgba(99, 95, 167, 0.856);">
+                            <img class="awal-logo-img" src="image/I2C.png" style="margin-left: 7px; margin-top: 8px;">
+                        </div>
+                    </div>
+                    <h1 class="awal-title" data-aos="zoom-in" data-aos-delay="200" style="letter-spacing: 1px;">INNOVATIVE INFORMATICS CONTEST</h1>       
+                    <div class="awal-title-big">
+                        <div class="glitch">
+                            <span class="gc gc-red">I2C 2020</span>
+                            <span class="gc gc-blue">I2C 2020</span>
+                            <span class="gc gc-green">I2C 2020</span>
+                            <span class="glitch__main">I2C 2020</span>
+                        </div>
+                    </div>
+                    <h1 class="awal-title-desc" data-aos="zoom-in" data-aos-delay="400">"Education Technology for Disability (Autism)"</h1>
+                    <p class="awal-desc" data-aos="zoom-in" data-aos-delay="500"  >Kompetisi ide aplikasi untuk siswa/i SMA seluruh Indonesia.<br>Tahun 2020 ini hadir dengan mengangkat tema "Education Technology for Disability (Autism)".</p> 
+                </div>  
+            <div id="particles-js" style="left: 0; right: 0; top : 0; margin: auto"></div> 
+                            
+            <script type = "text/javascript" src = "particles.js"></script> 
+            <script type = "text/javascript" src = "app.js"></script>   
+        </section>    
+        
+        <section class="section about" id="about">
+            <div style="width: 100px; height: 84px; border: 0px;"></div>
+            <div class="container">
+                <div class="">
+                    <div class="" data-aos="zoom-in">
+                    <h1 class="about--title"><i class="fas fa-question-circle"></i><br>Apa itu I2C?</h1>
+                    </div>
+                    <div class="" data-aos="zoom-in" data-aos-delay="200">
+                        <p class="about--description"><strong style="color: inherit">I2C</strong> (Innovative Informatics Contest) 2020 adalah sebuah lomba dimana siswa/i SMA/SMK yang tergabung dalam satu tim akan berlomba untuk merancang berbagai ide inovatif aplikasi dalam 
+                        <strong>aplikasi mobile</strong>. 
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+         
+        <section class="section">
+            <div class="" data-aos="zoom-in" style="color: white;">
+                <h1 class="about--title"><i class="fas fa-trophy"></i><br>PEMENANG<br>I2C 2020</h1>
+            </div>
+            <!-- Slider -->
+            <div id="slider" data-aos="zoom-in">
+                <div class="slides">
+                <div class="slider1" id="1">
+                    <div class="content1">
+                    <div class="content1-txt">
+                        <h1>Juara 1<br>Hocus Focus</h1>
+                        <h2>Menciptakan aplikasi bernama Focal yang menggunakan teknologi Mixed Reality untuk membawa cerita-cerita moral sederhana ke kehidupan nyata, membuat pengguna bisa menjalani cerita bersama seorang partner virtual.</h2>
+                    </div>
+                    </div>
+                    <div class="image1">
+                    <img src="image/Juara1.jpg" style="top: -50%;">
+                    </div>
+                </div>
+                <div class="slider1" id="2">
+                    <div class="content1">
+                    <div class="content1-txt">
+                        <h1>Juara 2<br>X Mipa Boys</h1>
+                        <h2>Menciptakan aplikasi frietism yang akan membuat anak menjadi semakin aktif berkomunikasi, berinteraksi, dan bersosialisasi dengan orang di sekitar, serta mengasah kecerdasan motorik, sensorik, dan kognitif anak.</h2>
+                    </div>
+                    </div>
+                    <div class="image1">
+                    <img src="image/Juara2.jpg">
+                    </div>
+                </div>
+                <div class="slider1" id="3">
+                    <div class="content1">
+                    <div class="content1-txt">
+                        <h1>Juara 3<br>Day Team</h1>
+                        <h2>Menciptakan aplikasi DAY (Diary, Activities, and You) dibuat untuk membantu anak autis mengingat keseharian rutinitas mereka, mengetahui emosi lewat detak jantung, dan untuk mengetahui keberadaan mereka.</h2>
+                    </div>
+                    </div>
+                    <div class="image1">
+                    <img src="image/Juara3.jpg">
+                    </div>
+                </div>
+                <div class="slider1" id="4">
+                    <div class="content1">
+                    <div class="content1-txt">
+                        <h1>Juara Poster Terfavorit<br>X Mipa Boys</h1>
+                        <h2>Berdasarkan jumlah likes pada Instagram <a href="https://www.instagram.com/ifest_uajy/">@ifest_uajy</a> sejumlah 417 dan vote sejumlah 18 suara.</h2>
+                    </div>
+                    </div>
+                    <div class="image1">
+                    <img src="image/Juara_fav.jpg">
+                    </div>
+                </div>
+                </div>
+                <!-- <div class="switch">
+                <ul>
+                    <li>
+                    <div class="on"></div>
+                    </li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+                </div> -->
+            </div>
+        </section>
+
+        <section class="section ketentuan" id="ketentuan" style=" left: 0; right: 0; margin: auto">
+            <div style="width: 100px; height: 84px; border: 0px;"></div>   
+            <div class="syarat-ketentuan" >
+                <div class="items">
+                    <div class="container">
+                        <div data-aos="fade-down">
+                        <center>
+                            <i class="fas section-fa fa-file-signature"></i>
+                            <h1 class="title 1 title-container">Ketentuan Kompetisi</h1>
+                            <p>Ketentuan kompetisi I2C 2020</p>
+                        </center>
+                        </div>
+                        <div class="ketentuan-umum" data-aos="zoom-in" data-aos-delay="200">
+                            <h1 class="title 1 ketentuan-title">Ketentuan Umum</h1>
+                            <div class="ketentuan-umum-isi">
+                                <ol>
+                                    <li>Peserta masih berstatus siswa di tingkat SMA/SMK sederajat se-Indonesia</li>
+                                    <li>Melakukan pendaftaran online melalui <a href="https://dashboard.ifest-uajy.com/register">https://dashboard.ifest-uajy.com/register</a></li>
+                                    <li>Setiap sekolah berhak mengirimkan lebih dari 1 tim (setiap timnya terdiri dari 3 anggota).</li>
+                                    <li>Biaya pendaftaran <strong>setiap tim</strong> sebesar Rp 150.000</li>
+                                    <li>Pembayaran maksimal <strong>9 Februari 2020</strong>.</li>
+                                    <li>Biaya pendaftaran yang telah dibayarkan tidak dapat ditarik kembali.</li>
+                                    <li>Pembayaran melalui transfer ke <strong>BCA 427-008-1211 a/n Gerardo Leonel Blesly</strong>, dan peserta wajib mengupload bukti transfer beserta tujuan pembayaran ke website I2C.</li>
+                                    <li>Proposal dalam bentuk softcopy diupload ke <a href="https://dashboard.ifest-uajy.com/dashboard/teams">https://dashboard.ifest-uajy.com/dashboard/teams</a> dengan format penamaan file <code>IFest#8UAJY_I2C_Nama Ide Aplikasi_Nama_Kelompok_Nama Sekolah.pdf</code></li>
+                                    <li>Mengupload hasil scan atau foto kartu pelajar dan surat persetujuan/ surat tugas untuk mengikuti lomba dengan format file .pdf dan dengan format nama file (namasekolah_namatim). </li>
+                                </ol>
+                            </div>
+                        </div>
+                        <div class="ketentuan-proposal" data-aos="zoom-in" data-aos-delay="200">
+                            <h1 class="title 1 ketentuan-title">Ketentuan Proposal</h1>
+                            <div class="ketentuan-proposal-isi">
+                                <ol>
+                                    <li>Karya/proposal harus sesuai dengan tema yang telah ditentukan.</li>
+                                    <li>Karya/proposal yang dilombakan dalam kompetisi ini belum pernah mendapat penghargaan di kompetisi lain atau karya belum pernah diikutsertakan di kompetisi lain.</li>
+                                    <li>Karya/proposal merupakan ide original peserta.</li>
+                                    <li>Karya/proposal tidak mengandung unsur SARA dan pornografi.</li>
+                                    <li><strong>Dua puluh proposal terbaik</strong> akan dipilih untuk ke babak final. Dalam babak final ini peserta akan mempresentasikan proposal. (Presentasi tanpa disertai video).</li>
+                                    <li>Peserta hanya mempresentasikan <strong>ide</strong> dari proposal dan <strong>tidak perlu</strong> membuat aplikasi yang akan dipresentasikan.</li>
+                                    <li>Tidak melanggar Hak Cipta, Hak Paten, dan Hak Merk. Hal tersebut bukan menjadi tanggung jawab Panitia.</li>
+                                </ol>
+                            </div>
+                        </div>
+                        <div class="ketentuan-isi-proposal" data-aos="zoom-in" data-aos-delay="200">
+                                <h1 class="title 1 ketentuan-title">Ketentuan Isi Proposal</h1>
+                                <p>Untuk penulisan proposal setidaknya terdapat hal-hal sebagai berikut</p>
+                                <div class="ketentuan-isi-proposal">
+                                    <ol>
+                                        <li><strong>Halaman sampul</strong> berisi judul, nama kelompok/nama peserta </li>
+                                        <li><strong>Latar Belakang</strong> yaitu, berisi latar belakang suatu dari permasalahan yang akan diangkat.</li>
+                                        <li><strong>Batasan Masalah</strong> yaitu, berisi batasan-batasan dari suatu masalah yang akan dibahas dan diberikan solusinya agar jelas pokok inti permasalahan tersebut.</li>
+                                        <li><strong>Tujuan</strong> yaitu, berisi tujuan dari pembuatan proposal berdasarkan masalah yang diangkat </li>
+                                        <li>
+                                            <strong>Solusi</strong>
+                                            <p>Solusi ini berupa <i><b>ide aplikasi</b></i> dari permasalahan yang telah dibahas sebelumnya. Di dalam solusi kurang lebih berisi hal-hal sebagai berikut:</p>
+                                            <ol type="a">
+                                                <li>Nama aplikasi</li>
+                                                <li>Deskripsi aplikasi <br>Deskripsi aplikasi, termasuk spesifikasi seperti manfaat, hal yang akan ditonjolkan pada aplikasi tersebut, dan lain sebagainya.</li>
+                                                <li>Dapat berupa desain user interface, story board, dan lain-lainnya yang sekiranya memberikan gambaran jelas tentang konsep dari ide aplikasi tersebut.</li>
+                                            </ol>
+                                        </li>
+                                        <li><strong>Kontribusi</strong> berisikan deskripsi pembagian pekerjaan masing-masing anggota tim terhadap proposal yang dibuat.</li>
+                                        <li>Penulisan proposal dalam <strong>Bahasa Indonesia</strong>.</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        <div class="ketentuan-presentasi" data-aos="zoom-in" data-aos-delay="200">
+                            <h1 class="title 1 ketentuan-title">Ketentuan Pameran</h1>
+                            <div class="ketentuan-pameran-isi">
+                                <ol>
+                                <li>Properti wajib:
+                                <ol type="a">
+                                        <li>Membawa poster ukuran A2 (42 cm x 59.4 cm).</li>
+                                        <li>Konten poster berisikan penjelasan singkat mengenai ide aplikasi yang dibuat dalam bentuk teks dan/atau gambar.</li>
+                                </ol>
+                                </li>
+                                <li>Untuk format layout ketentuan poster, dan logo-logo yang harus dicantumkan dapat diunduh di <a href="http://ifest-uajy.com/assets/i2c/Ketentuan_Poster.zip" download>sini</a>.</li>
+                                <li>Properti tambahan diperbolehkan untuk mendukung pameran stand yang berhubungan dengan proposal dengan syarat dan ketentuan yang diperkenankan oleh panitia. (seperti: booklet) .</li>
+                                <li>Dilarang menghias meja yang memiliki potensi dapat merusak meja.</li>
+                                </ol>
+                                
+                            </div>
+                        </div>    
+                        <div class="ketentuan-presentasi" data-aos="zoom-in" data-aos-delay="200">
+                            <h1 class="title 1 ketentuan-title">Ketentuan Presentasi</h1>
+                            <div class="ketentuan-presentasi-isi">
+                                <ol>
+                                    <li>Tema presentasi sesuai dengan ide aplikasi peserta dalam proposal.</li>
+                                    <li>Presentasi menampilkan tampilan aplikasi dan tidak disertai video.</li>
+                                    <li>Waktu presentasi 15 menit dan tanya jawab 10 menit</li>
+                                    <li>Presentasi menjelaskan latar belakang pemilihan ide, menjelaskan ide aplikasi, dan manfaat yang didapatkan ketika ide aplikasi diterapkan</li>
+                                    <li>Presentasi didesain dengan menggunakan media power point/sejenisnya.</li>
+                                    <li>Bahasa yang digunakan dalam slide presentasi yang dibuat adalah Bahasa Indonesia dan tidak diperbolehkan menggunakan Bahasa asing (Penggunaan bahasa asing hanya diperbolehkan untuk digunakan dalam nama ide aplikasi peserta).</li>
+                                    <li>Presentasi yang dilombakan tidak mengandung unsur SARA dan pornografi.</li>
+                                    <li>Untuk penyediaan fasilitas dapat menghubungi panitia terlebih dahulu sebelumnya (Kabel VGA/OTG).</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section hadiah" id="hadiah">
+            <div style="width: 100px; height: 84px; border: 0px;"></div>
+            <div class="container" data-aos="zoom-in">
+                <center>
+                    <i class="fas section-fa fa-trophy"></i>                
+                    <h1 class="title 1 title-container hadiah">Hadiah</h1>
+                    <p>Hadiah kompetisi I2C 2020</p>
+                </center>
+                <div class="columns has-text-centered hadiah-column">
+                    <div class="column" data-aos="zoom-in" data-aos-delay="300">
+                        <h1 class="title 1 hadiah">Juara 1</h1>
+                        <p>Rp. 4.000.000,-</p>
+                    </div>
+                    <div class="column" data-aos="zoom-in" data-aos-delay="500">
+                        <h1 class="title 1 hadiah">Juara 2</h1>
+                        <p>Rp. 3.000.000,-</p>
+                    </div>
+                    <div class="column" data-aos="zoom-in" data-aos-delay="700">
+                        <h1 class="title 1 hadiah">Juara 3</h1>
+                        <p>Rp. 2.000.000,-</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section timeline" id="timeline">
+            <div style="width: 100px; height: 84px; border: 0px;"></div>
+            <div class="container" data-aos="zoom-in">
+                <center>
+                    <i class="fas section-fa fa-calendar-alt"></i>                
+                    <h1 class="title 1 title-container">Jadwal Acara</h1>
+                    <p>Jadwal acara I2C 2020</p>
+                </center>
+                <div class="timeline__box">
+                        <div class="entries">
+                            <div class="entry left">
+                                <div class="entry__body" data-aos="fade-left">
+                                    <div class="title">Pendaftaran Online</div>
+                                    <h5 class="subtitle is-5">5 Desember 2019 - 9 Februari 2020</h5>
+                                </div>
+                            </div>
+                            <div class="entry right">
+                                <div class="entry__body" data-aos="fade-right">
+                                    <div class="title">Batas Pembayaran Biaya Pendaftaran</div>
+                                    <h5 class="subtitle is-5">9 Februari 2020</h5>
+                                </div>
+                            </div>
+                            <div class="entry left">
+                                <div class="entry__body" data-aos="fade-left">
+                                    <div class="title">Batas Akhir Pengumpulan Proposal</div>
+                                    <h5 class="subtitle is-5">9 Februari 2020</h5>
+                                </div>
+                            </div>
+                            <div class="entry right">
+                                <div class="entry__body" data-aos="fade-right">
+                                    <div class="title">Seleksi</div>
+                                    <h5 class="subtitle is-5">11 Februari 2020 - 14 Februari 2020</h5>
+                                </div>
+                            </div>
+                            <div class="entry left">
+                                <div class="entry__body" data-aos="fade-left">
+                                    <div class="title">Pengumuman Hasil Seleksi</div>
+                                    <h5 class="subtitle is-5">15 Februari 2020</h5>
+                                </div>
+                            </div>
+                            <div class="entry right">
+                                <div class="entry__body" data-aos="fade-right">
+                                    <div class="title">Pengumpulan Abstrak dan Poster</div>
+                                    <h5 class="subtitle is-5">15-18 Februari 2020</h5>
+                                </div>
+                            </div>
+                            <div class="entry left">
+                                <div class="entry__body" data-aos="fade-right">
+                                    <div class="title">Technical Meeting</div>
+                                    <h5 class="subtitle is-5">24 Februari 2020</h5>
+                                </div>
+                            </div>
+                            <div class="entry right">
+                                <div class="entry__body" data-aos="fade-left">
+                                    <div class="title">Final</div>
+                                    <h5 class="subtitle is-5">25 Februari 2020</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </section>
+        <section>
+            <div style="width: 100px; height: 84px; border: 0px;"></div>
+            <div style="text-align: center;" data-aos="zoom-in">
+                <i class="fas section-fa fa-handshake" style="text-align: center;"></i>  
+                <h1 class="title 1 title-container" style="text-align: center; color: #ffffff;">Didukung oleh</h1>
+                <!-- <p style="color: #ffffff;">Sponsor acara I2C 2020</p> -->
+            </div>
+            <div class="sponsor"  style="text-align: center; margin-top: 20px;">
+                <div class="media">
+                    <img src="image/RedDoorz.png"  data-aos="zoom-in" style="max-width: 180px;">
+                    <img src="image/Insan.jpeg" data-aos="zoom-in" style="max-width: 104px;">
+                    <img src="image/prayprint.png"  data-aos="zoom-in" class="m-img" alt="Media Partner" style=" height: auto; width: 120px;">
+                    <!-- <img src="image/sponsor/kalbis.jpg" class="m-img" data-aos="zoom-in">
+                    <img src="image/sponsor/bca.jpg" class="m-img" data-aos="zoom-in">
+                    <img src="image/sponsor/reddoorz.png" class="m-img" data-aos="zoom-in">
+                    <img src="image/sponsor/shopee.png" class="l-img" data-aos="zoom-in">
+                    <img src="image/sponsor/topcapucino.png" class="m-img" data-aos="zoom-in"> -->
+                </div>
+            </div>
+        </section>
+        <section>
+            <div style="width: 100px; height: 84px; border: 0px;"></div>
+            <div style="text-align: center;" data-aos="zoom-in">
+            <i class="fas fa-newspaper fa-3x" style="text-align: center;"></i>  
+                <h1 class="title 1 title-container" style="text-align: center; color: #ffffff;">Media Partner</h1>
+            </div>
+            <div class="sponsor" style="text-align: center; margin-top: 20px;">
+                <div class="media"  style="text-align: center; margin-top: 20px;">
+                        <img src="image/White.png"  data-aos="zoom-in" style="max-width: 180px;">
+                        <a href="https://www.haievent.com/" title="HaiEvent.com">
+                            <img src="https://ucarecdn.com/562a602e-dcc4-4b25-99b9-2eab74d9e4fd/logo1kk.png"  data-aos="zoom-in" alt="Media Partner" style="height: auto; width: 75px;">
+                        </a>
+                        <img src="image/file.png"  data-aos="zoom-in" class="m-img" alt="Media Partner" style="height: auto; width: 75px;">
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <!-- Start Carousel -->
+                <div id="carousel-demo" class="carousel">
+                    <div class="item-1">
+                        <img src="image/PIC1.JPG">
+                    </div>
+                    <div class="item-2">
+                        <img src="image/PIC2.JPG">
+                    </div>
+                    <div class="item-3">
+                        <img src="image/PIC3.JPG">
+                    </div>
+                    <div class="item-4">
+                        <img src="image/PIC4.JPG">
+                    </div>
+                    <div class="item-5">
+                        <img src="image/PIC5.JPG">
+                    </div>
+                </div>
+                <!-- End Carousel -->
+            </div>
+        </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/js/bulma-carousel.min.js"></script>
+    <script>
+    bulmaCarousel.attach('#carousel-demo', {
+        slidesToScroll: 1,
+        slidesToShow: 2,
+        autoplay: "true",
+        infinite: "true"
+    });
+    </script>
+
+    <footer class="footer" id="hubungikami" style="background-color: #000;">
+            <div style="width: 100px; height: 84px; border: 0px;"></div>
+        <div class="content has-text-centered" data-aos="zoom-in" >
+            <div class="columns">
+                <div class="column" data-aos="zoom-in" data-aos-delay="200">
+                    <h1 class="footer-text">Hubungi Kami</h1>
+                <div class="phone__box__content">
+                    <p class="phone__box">
+                        <i class="fas fa-phone"></i> &nbsp; +62 877 7371 8611  (Novita)
+                    </p>
+                    <p class="phone__box">
+                            <i class="fab fa-line brands"></i> &nbsp; nov.novitad
+                    </p>
+                    <p class="phone__box">
+                        <i class="fas fa-phone"></i> &nbsp; +62 895 3761 23658 (Hizkia)
+                    </p>
+                    <p class="phone__box">
+                            <i class="fab fa-line brands"></i> &nbsp; inihizkia
+                    </p>
+                </div>
+                </div>
+                <div class="column" data-aos="zoom-in" data-aos-delay="200">
+                    <h1 class="footer-text">Scan Us on LINE!</h1>
+                    <img class="footer-image" src="image/line_qrcode.png">
+                </div>
+                <div class="column" data-aos="zoom-in" data-aos-delay="200">
+                    <h1 class="footer-text">Ikuti Kami</h1>
+                    <div class="phone__box__content">
+                        <p class="phone__box">
+                            <i class="fab fa-line brands"></i> &nbsp; <a href="http://line.me/ti/p/~@ykb1847q">@ykb1847q</a>
+                        </p>
+                        <p class="phone__box">
+                            <i class="fab fa-instagram brands"></i> &nbsp; <a href="https://www.instagram.com/ifest_uajy/">@ifest_uajy</a>
+                        </p>
+                        <p class="phone__box">
+                            <i class="fab fa-youtube brands"></i> &nbsp; <a href="https://www.youtube.com/channel/UCuZZWzBCbOhaA76oqye3z2A">IFEST YouTube Channel</a>
+                        </p>
+                        <p class="phone__box">
+                            <i class="fab fa-facebook brands"></i> &nbsp; <a href="https://www.facebook.com/Ifest-7-188102558810238/">IFEST Facebook Page</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__title">
+                <strong style="color:cornflowerblue"></strong>
+    
+            </div>
+            <p class="text-center ma-0 footer-font">
+                Made with
+                <span style="color: #ff4757; font-size: 1.5em; vertical-align:middle;"><img style="height:1em; margin:auto;" 
+                src="data:image/svg+xml;base64,
+                PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy
+                8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9
+                IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgNDkyLjcxOSA0OTIuNzE5IiBzdHlsZT0iZW5hYm
+                xlLWJhY2tncm91bmQ6bmV3IDAgMCA0OTIuNzE5IDQ5Mi43MTk7IiB4bWw6c3BhY2U9InByZXNl
+                cnZlIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgY2xhc3M9IiI+PGc+PGc+Cgk8ZyBpZD0iSW
+                NvbnNfMThfIj4KCQk8cGF0aCBkPSJNNDkyLjcxOSwxNjYuMDA4YzAtNzMuNDg2LTU5LjU3My0x
+                MzMuMDU2LTEzMy4wNTktMTMzLjA1NmMtNDcuOTg1LDAtODkuODkxLDI1LjQ4NC0xMTMuMzAyLD
+                YzLjU2OSAgICBjLTIzLjQwOC0zOC4wODUtNjUuMzMyLTYzLjU2OS0xMTMuMzE2LTYzLjU2OUM1
+                OS41NTYsMzIuOTUyLDAsOTIuNTIyLDAsMTY2LjAwOGMwLDQwLjAwOSwxNy43MjksNzUuODAzLD
+                Q1LjY3MSwxMDAuMTc4ICAgIGwxODguNTQ1LDE4OC41NTNjMy4yMiwzLjIyLDcuNTg3LDUuMDI5
+                LDEyLjE0Miw1LjAyOWM0LjU1NSwwLDguOTIyLTEuODA5LDEyLjE0Mi01LjAyOWwxODguNTQ1LT
+                E4OC41NTMgICAgQzQ3NC45ODgsMjQxLjgxMSw0OTIuNzE5LDIwNi4wMTcsNDkyLjcxOSwxNjYu
+                MDA4eiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgY2xhc3M9ImFjdGl2ZS1wYXRoIiBzdHlsZT0
+                iZmlsbDojRkY0NzU3IiBkYXRhLW9sZF9jb2xvcj0iIzAwMDAwMCI+PC9wYXRoPgoJPC9nPgo8L2c+PC9nPiA8L3N2Zz4=" /></span>
+                by
+                <strong style="color : #fff;">SI IFest</strong>
+                |&nbsp;Hak Cipta © 2020
+                <a  
+                  href="https://ifest-uajy.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="LinkToHome"
+                >
+                  <span class="footer-text">Informatics Festival (IFest) #8</span>
+                </a>
+              </p>
+            <!-- <div class="footer__text">
+                <p class="login--ptext">&copy; 2019 - <a class="foot-link" href="https://ifest-uajy.com">IFEST#8</a> Sie. Sistem Informasi</p>
+            </div> -->
+        </div>
+    </footer>
+    <script>
+        AOS.init();
+    //Mobile
+    $('.navbar-burger').on('click', function(){
+        $('.navbar-menu').toggleClass('action');
+    });
+    </script>
+            
+        
+    </body>
+
+</html>
